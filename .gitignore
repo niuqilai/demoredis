@@ -5,4 +5,5 @@ portal_dbi/portal_dbi.iml
 portal_dbi/target/
 portal_facade/portal_facade.iml
 portal_facade/target/
+portal_web/portal_web.iml
 underlying-infrastructure.iml
