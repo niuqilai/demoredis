@@ -1,0 +1,54 @@
+spring:
+  jackson.date-format: yyyy-MM-dd HH:mm:ss
+  application:
+    name: portal-api
+  profiles:
+    active: dev #默认为开发环境
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 5MB
+  cloud: # 配置中心地址
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        # 配置中心-指定命名空间
+        namespace: atech
+        # 指定配置文件后缀
+        file-extension: yml
+        # 注册中心地址
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # 指定命名空间
+        namespace: atech
+      sentinel:
+        transport:
+            #配置Sentin dashboard地址
+            dashboard: localhost:8090
+            # 默认8719端口，假如被占用了会自动从8719端口+1进行扫描，直到找到未被占用的 端口
+            port: 8099
+server:
+  port: 8081
+secure:
+  ignored:
+    urls: #安全路径白名单
+      - /swagger-ui.html
+      - /swagger-resources/**
+      - /swagger/**
+      - /**/v2/api-docs
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.ico
+      - /webjars/springfox-swagger-ui/**
+      - /actuator/**
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: newProducer
+    topic: newTopic
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
