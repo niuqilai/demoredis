@@ -6,10 +6,12 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 @RestController
 public class RedisStringCmd {
 
-
+    @Resource
     private RedisTemplate<String, Object> redisTemplate;
 
     /*
@@ -34,6 +36,8 @@ public class RedisStringCmd {
     @RequestMapping(value = "/execCustRedisString", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult execCustStringCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
+        System.out.println(11);
+        redisTemplate.opsForHash().put("hashkey", redisCmdParam.getOrderSn(),redisCmdParam.getPayType() );
         return null;
     }
     @RequestMapping(value = "/execDefaultRedisString", method = RequestMethod.POST)

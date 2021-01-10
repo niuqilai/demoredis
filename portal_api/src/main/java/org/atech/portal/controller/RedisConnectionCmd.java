@@ -25,15 +25,15 @@ public class RedisConnectionCmd {
      *
      * 接收前端界面，产生客户化命令
      */
-    @RequestMapping(value = "/execCustRedisHash", method = RequestMethod.POST)
+    @RequestMapping(value = "/execCustRedisConnection", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult execCustHashCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
+    public CommonResult execCustConnectionCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
         //
         return null;
     }
-    @RequestMapping(value = "/execDefaultRedisHash", method = RequestMethod.POST)
+    @RequestMapping(value = "/execDefaultRedisConnection", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult execDefaultHashCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
+    public CommonResult execDefaultConnectionCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
 
         return null;
     }

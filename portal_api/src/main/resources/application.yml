@@ -8,6 +8,17 @@ spring:
     multipart:
       enabled: true #开启文件上传
       max-file-size: 5MB
+  redis:
+    host: 192.168.102.136
+    password:
+    port: 6379
+    timeout: 2000
+    pool:
+        maxActive: 15 # 最大连接数
+        maxIdle: 10 # 最大空闲连接
+        minIdle: 5 # 最小空闲连接
+        maxWaitMillis: 10000 # 获取连接最大等待时间
+        testOnBorrow: true # 获取连接时检测是否可用
 #  cloud: # 配置中心地址
 #    nacos:
 #      config:
@@ -52,3 +63,4 @@ management:
     web:
       exposure:
         include: '*'
+

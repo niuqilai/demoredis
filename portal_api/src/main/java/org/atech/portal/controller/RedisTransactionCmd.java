@@ -24,13 +24,13 @@ public class RedisTransactionCmd {
      *
      * 接收前端界面，产生客户化命令
      */
-    @RequestMapping(value = "/execCustRedisHash", method = RequestMethod.POST)
+    @RequestMapping(value = "/execCustRedisTransaction", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult execCustHashCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
+    public CommonResult execCustTransactionCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
         //
         return null;
     }
-    @RequestMapping(value = "/execDefaultRedisHash", method = RequestMethod.POST)
+    @RequestMapping(value = "/execDefaultRedisTransaction", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult execDefaultHashCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
 
