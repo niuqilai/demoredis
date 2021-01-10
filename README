@@ -11,5 +11,5 @@
 
 功能一:    类似RedisDesktop效果
 对Redis的管理命令调用,
-可以是jedis, redissson ,也可以是shell脚本远程调用
+可以是jedis, redissson ,也可以是shell脚本本地,远程调用
 将调用结果展示到页面
