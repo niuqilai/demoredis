@@ -36,8 +36,7 @@ public class RedisStringCmd {
     @RequestMapping(value = "/execCustRedisString", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult execCustStringCmds(@Validated @RequestBody RedisCmdParam redisCmdParam) {
-        System.out.println(11);
-        redisTemplate.opsForHash().put("hashkey", redisCmdParam.getOrderSn(),redisCmdParam.getPayType() );
+        redisTemplate.opsForHash().put(redisCmdParam.getOrderSn(), redisCmdParam.getPayType(),redisCmdParam.getTotalAmount() );
         return null;
     }
     @RequestMapping(value = "/execDefaultRedisString", method = RequestMethod.POST)
