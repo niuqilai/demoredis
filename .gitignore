@@ -1,0 +1,8 @@
+/.idea/
+portal_api/portal_api.iml
+portal_api/target/
+portal_dbi/portal_dbi.iml
+portal_dbi/target/
+portal_facade/portal_facade.iml
+portal_facade/target/
+underlying-infrastructure.iml

@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MqProducer {
     Logger log = org.slf4j.LoggerFactory.getLogger(MqProducer.class);
-    @Autowired
-    private RocketMQTemplate rocketMQTemplate;
-    public void sendMsg(String topic, String msg)
-    {
-        log.info("发送报文：" + msg);
-        this.rocketMQTemplate.convertAndSend(topic, msg);
-    }
+//    @Autowired
+//    private RocketMQTemplate rocketMQTemplate;
+//    public void sendMsg(String topic, String msg)
+//    {
+//        log.info("发送报文：" + msg);
+//        this.rocketMQTemplate.convertAndSend(topic, msg);
+//    }
 }

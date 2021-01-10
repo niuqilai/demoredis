@@ -90,13 +90,13 @@ public class PortalOrderController {
         return CommonResult.success(CommonPage.restPage(orderLists));
     }
 
-    @Autowired
-    MqProducer mqProducer;
-    @ApiOperation("发送消息")
-    @RequestMapping("/msg")
-    @ResponseBody
-    public void msg() {
-        log.debug("sneding msg");
-        mqProducer.sendMsg("newTopic","1");
-    }
+//    @Autowired
+//    MqProducer mqProducer;
+//    @ApiOperation("发送消息")
+//    @RequestMapping("/msg")
+//    @ResponseBody
+//    public void msg() {
+//        log.debug("sneding msg");
+//        mqProducer.sendMsg("newTopic","1");
+//    }
 }
