@@ -21,6 +21,7 @@
         <module>portal_api</module>
         <module>portal_facade</module>
         <module>portal_dbi</module>
+        <module>portal_web</module>
     </modules>
 
     <properties>

@@ -1,0 +1,15 @@
+ 模块结构:
+ portal_api 提供各种命令调用方式，调用方式包含了以下策略
+  1. java 客户端调用
+  2. shell 脚本调用
+
+ portal_dbi    分布式使用
+ portal_facade 分布式使用
+ portal_web    前后端分离，页面使用
+
+
+
+功能一:    类似RedisDesktop效果
+对Redis的管理命令调用,
+可以是jedis, redissson ,也可以是shell脚本远程调用
+将调用结果展示到页面
