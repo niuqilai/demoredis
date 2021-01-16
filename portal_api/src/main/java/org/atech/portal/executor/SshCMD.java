@@ -7,10 +7,13 @@ import ch.ethz.ssh2.Session;
 import java.io.*;
 import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
+
+/**
+ * 执行脚本工具类
+ */
 public class SshCMD {
 
-
-    static int executeLocalCmd(String shPath) {
+   public static int executeLocalCmd(String shPath) {
         try {
             Process ps = Runtime.getRuntime().exec(shPath);
             ps.waitFor();
@@ -28,7 +31,7 @@ public class SshCMD {
         return 1;
     }
 
-    static String executeRemoteCmd(String userName, String password, String ipAddr, String cmd) {
+    public static String executeRemoteCmd(String userName, String password, String ipAddr, String cmd) {
         int TIME_OUT = 1000 * 5 * 60;
         String result = "";
         Connection conn  = null;
@@ -66,7 +69,7 @@ public class SshCMD {
         return result + (ret==-1? "腳本異常退出":"腳本成功退出");
     }
 
-    public static String processStdout(InputStream in, String cmd) {
+    private static String processStdout(InputStream in, String cmd) {
         InputStream stdout = new BufferedInputStream(in);
         StringBuilder buffer = new StringBuilder();
         try {
